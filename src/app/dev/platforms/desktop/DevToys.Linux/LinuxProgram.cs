@@ -127,6 +127,7 @@ internal partial class LinuxProgram
         _serviceCollection.AddScoped<UIDialogService, UIDialogService>();
         _serviceCollection.AddScoped<FontService, FontService>();
         _serviceCollection.AddScoped<MonacoLanguageService, MonacoLanguageService>();
+        _serviceCollection.AddScoped<Api.IUIAsyncInvoker, DevToys.Blazor.Core.UIAsyncInvoker>();
 
         ServiceProvider serviceProvider = _serviceCollection.BuildServiceProvider();
 

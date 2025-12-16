@@ -9,3 +9,15 @@
         </LayoutView>
     </NotFound>
 </Router>
+
+@code {
+    [Microsoft.AspNetCore.Components.Inject] private DevToys.Api.IUIAsyncInvoker UIAsyncInvoker { get; set; } = default!;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            DevToys.Blazor.Core.GUI.UIAsyncInvokerInstance = UIAsyncInvoker;
+        }
+    }
+}

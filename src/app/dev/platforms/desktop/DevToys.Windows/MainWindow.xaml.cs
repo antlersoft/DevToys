@@ -184,6 +184,7 @@ public partial class MainWindow : MicaWindowWithOverlay
         serviceCollection.AddScoped<UIDialogService, UIDialogService>();
         serviceCollection.AddScoped<FontService, FontService>();
         serviceCollection.AddScoped<MonacoLanguageService, MonacoLanguageService>();
+        serviceCollection.AddScoped<Api.IUIAsyncInvoker, DevToys.Blazor.Core.UIAsyncInvoker>();
 
         ServiceProvider serviceProvider = serviceCollection.BuildServiceProvider();
 
