@@ -18,6 +18,7 @@
         if (firstRender)
         {
             DevToys.Api.GUI.UIAsyncInvokerInstance = UIAsyncInvoker;
+            ((DevToys.Blazor.Core.UIAsyncInvoker)UIAsyncInvoker).SetComponent(this);
         }
     }
 }
